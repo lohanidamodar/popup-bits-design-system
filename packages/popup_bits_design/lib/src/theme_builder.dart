@@ -187,7 +187,7 @@ class PopupBitsTheme {
   /// Pick a legible on-color for a filled background.
   static Color _onColor(Color bg) {
     // Relative luminance check — threshold tuned for brand greens/teals.
-    final l = (0.2126 * bg.red + 0.7152 * bg.green + 0.0722 * bg.blue) / 255;
+    final l = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
     return l > 0.62 ? PbTokens.n900 : Colors.white;
   }
 

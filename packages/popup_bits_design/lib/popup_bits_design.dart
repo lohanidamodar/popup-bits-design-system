@@ -5,7 +5,7 @@
 // product themes — apps declare their own via `PbProductTheme(...)`,
 // or import the opt-in first-party set from
 // `package:popup_bits_design/products.dart`.
-library popup_bits_design;
+library;
 
 export 'src/tokens.dart';
 export 'src/archetype.dart';

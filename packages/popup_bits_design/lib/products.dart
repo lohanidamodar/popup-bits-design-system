@@ -12,6 +12,6 @@
 //     archetype: PbArchetype.cultural,
 //     product:   PbProducts.jyotish,
 //   );
-library popup_bits_design.products;
+library;
 
 export 'src/products.dart';
