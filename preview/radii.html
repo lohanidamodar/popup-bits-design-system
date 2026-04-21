@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .cell{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .box{width:72px;height:72px;background:var(--accent);box-shadow:var(--sh-sm)}
+  .cap{font-family:var(--font-mono);font-size:11px;color:var(--fg-muted);text-align:center}
+  .cap b{display:block;font-weight:700;color:var(--fg);font-family:var(--font-sans);font-size:12px}
+</style></head><body>
+<div class="grid">
+  <div class="cell"><div class="box" style="border-radius:6px"></div><div class="cap"><b>r-xs</b>6 px</div></div>
+  <div class="cell"><div class="box" style="border-radius:10px"></div><div class="cap"><b>r-sm</b>10 px · inputs</div></div>
+  <div class="cell"><div class="box" style="border-radius:14px"></div><div class="cap"><b>r-md</b>14 px · buttons</div></div>
+  <div class="cell"><div class="box" style="border-radius:20px"></div><div class="cap"><b>r-lg</b>20 px · cards</div></div>
+  <div class="cell"><div class="box" style="border-radius:28px"></div><div class="cap"><b>r-xl</b>28 px · heroes</div></div>
+  <div class="cell"><div class="box" style="border-radius:36px"></div><div class="cap"><b>r-2xl</b>36 px</div></div>
+  <div class="cell"><div class="box" style="border-radius:999px"></div><div class="cap"><b>r-pill</b>CTAs</div></div>
+  <div class="cell"><div class="box" style="border-radius:28%;background:var(--pb-ink,#0E1726)"></div><div class="cap"><b>squircle</b>app icons · 28 %</div></div>
+</div>
+</body></html>

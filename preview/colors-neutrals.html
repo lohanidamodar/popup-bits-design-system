@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .sw{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--bg-raised)}
+  .sw .chip{height:78px}
+  .sw .meta{padding:8px 10px;font-size:11px;line-height:1.35}
+  .sw .meta b{display:block;font-weight:700;font-size:12px}
+  .sw .meta code{font-family:var(--font-mono);color:var(--fg-muted);font-size:10px}
+  h3{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);font-weight:700}
+</style></head><body>
+<h3>Neutrals</h3>
+<div class="grid" style="margin-bottom:18px">
+  <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="meta"><b>n-0</b><code>#FFFFFF</code></div></div>
+  <div class="sw"><div class="chip" style="background:#FAFAF7"></div><div class="meta"><b>n-50 · bg</b><code>#FAFAF7</code></div></div>
+  <div class="sw"><div class="chip" style="background:#F2F3EF"></div><div class="meta"><b>n-100</b><code>#F2F3EF</code></div></div>
+  <div class="sw"><div class="chip" style="background:#E6E7E1"></div><div class="meta"><b>n-200 · border</b><code>#E6E7E1</code></div></div>
+  <div class="sw"><div class="chip" style="background:#D4D6CE"></div><div class="meta"><b>n-300</b><code>#D4D6CE</code></div></div>
+  <div class="sw"><div class="chip" style="background:#A8ABA1"></div><div class="meta"><b>n-400</b><code>#A8ABA1</code></div></div>
+  <div class="sw"><div class="chip" style="background:#7A7D73"></div><div class="meta"><b>n-500</b><code>#7A7D73</code></div></div>
+  <div class="sw"><div class="chip" style="background:#55584F"></div><div class="meta" style="color:#fff;background:#55584F"><b>n-600 · fg-muted</b><code style="color:#D4D6CE">#55584F</code></div></div>
+  <div class="sw"><div class="chip" style="background:#373A33"></div><div class="meta" style="color:#fff;background:#373A33"><b>n-700</b><code style="color:#D4D6CE">#373A33</code></div></div>
+  <div class="sw"><div class="chip" style="background:#121310"></div><div class="meta" style="color:#fff;background:#121310"><b>n-900 · fg</b><code style="color:#D4D6CE">#121310</code></div></div>
+</div>
+</body></html>

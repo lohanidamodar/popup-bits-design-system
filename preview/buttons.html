@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans)}
+  .row{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap}
+  .lbl{width:110px;font-size:11px;font-weight:700;color:var(--fg-muted);letter-spacing:.06em;text-transform:uppercase}
+  button{font:inherit;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:all 180ms var(--ease-out)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{filter:brightness(1.05);box-shadow:var(--sh-md)}
+  .btn-secondary{background:transparent;color:var(--accent);border:1.5px solid var(--accent);border-radius:14px}
+  .btn-ghost{background:var(--accent-soft);color:var(--accent-ink);border-radius:14px}
+  .btn-dest{background:var(--danger);color:#fff}
+  .btn-disabled{background:var(--n-200);color:var(--n-400);cursor:not-allowed}
+  .sm{font-size:12px;padding:6px 12px}
+  .lg{font-size:16px;padding:14px 26px}
+</style></head><body>
+<div class="row theme-meronepali">
+  <div class="lbl">Mero Nepali</div>
+  <button class="btn-primary">Start learning</button>
+  <button class="btn-secondary">Listen</button>
+  <button class="btn-ghost">Skip</button>
+</div>
+<div class="row theme-spellcraft">
+  <div class="lbl">SpellCraft</div>
+  <button class="btn-primary">Play</button>
+  <button class="btn-secondary">Settings</button>
+  <button class="btn-ghost">Hint</button>
+</div>
+<div class="row theme-meropatro">
+  <div class="lbl">Mero Patro</div>
+  <button class="btn-primary">Sign in</button>
+  <button class="btn-secondary">Events</button>
+  <button class="btn-ghost">Today</button>
+</div>
+<div class="row theme-rent">
+  <div class="lbl">Rent</div>
+  <button class="btn-primary">List a property</button>
+  <button class="btn-secondary">Save search</button>
+  <button class="btn-dest">Remove</button>
+  <button class="btn-disabled">Unavailable</button>
+</div>
+</body></html>

@@ -1,0 +1,20 @@
+name: popup_bits_design
+description: Popup Bits base design system for Flutter — tokens, archetypes, and a composable ThemeData builder. Bring your own product theme.
+version: 0.1.0
+homepage: https://github.com/popupbits/popup_bits_design
+repository: https://github.com/popupbits/popup_bits_design
+issue_tracker: https://github.com/popupbits/popup_bits_design/issues
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0

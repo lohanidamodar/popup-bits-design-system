@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .cell{padding:14px 16px;border:1px solid var(--border);border-radius:14px;background:var(--bg-raised)}
+  .cell b{display:block;font-weight:700;margin-bottom:4px;font-size:13px}
+  .cell code{display:block;font-family:var(--font-mono);font-size:11px;color:var(--fg-muted)}
+  .demo{margin-top:10px;height:36px;width:36px;border-radius:50%;background:var(--accent)}
+  @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+  .pop{animation:pop 280ms cubic-bezier(.34,1.56,.64,1) infinite}
+  @keyframes fade{0%,100%{opacity:1}50%{opacity:.2}}
+  .fade{animation:fade 220ms cubic-bezier(.2,.8,.2,1) infinite alternate}
+  @keyframes slide{0%{transform:translateX(-8px);opacity:0}100%{transform:translateX(0);opacity:1}}
+  .slide{animation:slide 220ms cubic-bezier(.2,.8,.2,1) infinite alternate}
+</style></head><body class="theme-spellcraft">
+<div class="grid">
+  <div class="cell"><b>t-fast · 120 ms</b><code>ease-out · hover/focus</code></div>
+  <div class="cell"><b>t-med · 220 ms</b><code>ease-out · enter</code><div class="demo slide"></div></div>
+  <div class="cell"><b>t-slow · 360 ms</b><code>ease-in-out · swap</code><div class="demo fade"></div></div>
+  <div class="cell"><b>ease-spring</b><code>.34 1.56 .64 1 · reward pop</code><div class="demo pop"></div></div>
+  <div class="cell"><b>ease-out</b><code>.2 .8 .2 1 · default enter</code></div>
+  <div class="cell"><b>ease-in-out</b><code>.6 0 .2 1 · state swap</code></div>
+</div>
+</body></html>

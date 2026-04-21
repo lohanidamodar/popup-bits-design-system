@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .sw{display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;border:1px solid var(--border);background:var(--bg-raised)}
+  .dot{width:36px;height:36px;border-radius:10px;flex:none}
+  .meta{font-size:13px;font-weight:700}
+  .meta code{display:block;font-family:var(--font-mono);font-size:11px;color:var(--fg-muted);font-weight:400;margin-top:2px}
+</style></head><body>
+<div class="grid">
+  <div class="sw"><div class="dot" style="background:#2E9E6D"></div><div class="meta">Success<code>#2E9E6D</code></div></div>
+  <div class="sw"><div class="dot" style="background:#F6B13C"></div><div class="meta">Warning<code>#F6B13C</code></div></div>
+  <div class="sw"><div class="dot" style="background:#E85A4F"></div><div class="meta">Danger<code>#E85A4F</code></div></div>
+  <div class="sw"><div class="dot" style="background:#4A90E2"></div><div class="meta">Info<code>#4A90E2</code></div></div>
+</div>
+</body></html>

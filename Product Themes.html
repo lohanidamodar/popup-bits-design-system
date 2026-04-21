@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Popup Bits — Product Themes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  :root { color-scheme: light; }
+  body{margin:0;padding:32px 24px 80px;background:var(--n-100);font-family:var(--font-sans);color:var(--fg)}
+  .page{max-width:1360px;margin:0 auto}
+  header.hero{max-width:820px;margin:0 auto 40px;padding:0 8px}
+  header.hero .eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:var(--fg-muted);margin-bottom:12px}
+  header.hero h1{font-family:var(--font-display);font-size:48px;font-weight:800;line-height:1.05;letter-spacing:-.015em;margin:0 0 12px}
+  header.hero p{font-size:17px;line-height:1.55;color:var(--fg-muted);max-width:640px;margin:0}
+
+  .product{background:#fff;border-radius:22px;padding:28px;margin-bottom:28px;border:1px solid #E6E7E1;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+  .phead{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+  .phead .mark{width:56px;height:56px;border-radius:14px;background:#F2F3EF;display:grid;place-items:center;overflow:hidden}
+  .phead .mark img{width:100%;height:100%;display:block}
+  .phead .pmeta{flex:1;min-width:0}
+  .phead .pname{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-.01em;line-height:1;margin:0 0 6px}
+  .phead .ptag{font-size:13px;color:#55584F;line-height:1.35}
+  .phead .archetype-chip{background:#F2F3EF;color:#55584F;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;border:1px solid #E6E7E1}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+  .variant{border-radius:16px;overflow:hidden;border:1px solid #E6E7E1;background:var(--bg);display:flex;flex-direction:column}
+  .variant-head{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#fff;border-bottom:1px solid #E6E7E1;gap:8px}
+  .variant-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#55584F;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .swatches{display:flex;gap:3px;flex-shrink:0}
+  .sw{width:18px;height:18px;border-radius:5px;border:1px solid rgba(0,0,0,.08)}
+
+  .demo{padding:18px;min-height:340px;background:var(--bg);color:var(--fg);display:flex;flex-direction:column;gap:12px}
+  .demo .topbar{display:flex;align-items:center;gap:10px}
+  .demo .appmark{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:var(--accent-ink);font-weight:900;font-size:14px;font-family:var(--font-display);flex-shrink:0}
+  .demo .apptitle{flex:1;min-width:0;font-family:var(--font-display);font-weight:800;font-size:16px;letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .demo .iconbtn{width:30px;height:30px;border-radius:10px;background:var(--bg-sunken);display:grid;place-items:center;color:var(--fg-muted);font-size:13px;flex-shrink:0}
+
+  .demo .hero{padding:14px;border-radius:14px;background:var(--accent-soft);color:var(--accent-ink);display:flex;flex-direction:column;gap:4px}
+  .demo .hero .eyebrow{font-size:9.5px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;opacity:.72}
+  .demo .hero .title{font-family:var(--font-display);font-weight:800;font-size:19px;line-height:1.15}
+  .demo .hero .sub{font-size:12.5px;line-height:1.45;opacity:.78}
+
+  .demo .list{display:flex;flex-direction:column;gap:7px}
+  .demo .row{display:flex;align-items:center;gap:10px;padding:9px 11px;background:var(--bg-raised);border:1px solid var(--border);border-radius:12px}
+  .demo .row .dot{width:26px;height:26px;border-radius:8px;background:var(--accent);opacity:.92;flex-shrink:0}
+  .demo .row .rt{flex:1;min-width:0}
+  .demo .row .rtitle{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .demo .row .rsub{font-size:11px;color:var(--fg-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .demo .row .badge{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
+
+  .demo .btnrow{display:flex;gap:8px;margin-top:auto}
+  .demo .btn{flex:1;height:40px;border-radius:999px;border:none;font-family:var(--font-sans);font-size:13px;font-weight:800;cursor:pointer;display:grid;place-items:center;white-space:nowrap}
+  .demo .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .demo .btn-secondary{background:transparent;color:var(--fg);border:1.5px solid var(--border)}
+
+  .arch-kid .demo .btn,.arch-kid .demo .row{border-radius:18px}
+  .arch-utility .demo .btn{border-radius:10px}
+  .arch-marketplace .demo .btn{border-radius:8px}
+  .arch-cultural .demo .apptitle,.arch-cultural .demo .hero .title{font-family:var(--font-deva)}
+
+  /* Dark surface mods — applied to any .variant with .is-dark */
+  .variant.is-dark .variant-head{background:#111418;border-bottom-color:#262B33;color:#C7BFAE}
+  .variant.is-dark .variant-label{color:#C7BFAE}
+
+  footer.caveats{max-width:820px;margin:48px auto 0;padding:20px 24px;background:#fff;border-radius:14px;border:1px solid #E6E7E1;font-size:13px;line-height:1.6;color:#55584F}
+  footer.caveats strong{color:#22241F;font-weight:800}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="hero">
+  <div class="eyebrow">Popup Bits · Design System</div>
+  <h1>Product Themes</h1>
+  <p>Seven products × two variants (<strong>safe</strong> + <strong>bold</strong>) × two modes (<strong>light</strong> + <strong>dark</strong>) — 28 demos total. Every theme is designed from first principles against its archetype, not eyedropped from shipping builds.</p>
+</header>
+
+<div id="mount"></div>
+
+<footer class="caveats">
+  <strong>Caveats.</strong> All themes are design judgement — accent hexes, archetype pairings, and safe/bold pairings are open to change. Logos are fresh placeholders; swap when officials land.
+</footer>
+
+</div>
+
+<script>
+// ─── Theme specs ──────────────────────────────────────────────
+// Each variant has a `light` and `dark` surface set. Accent triplet is
+// shared across modes (brand identity is stable across light/dark).
+
+const products = [
+  {
+    id: 'popupbits', name: 'Popup Bits', archetype: 'Utility', archClass: 'arch-utility',
+    tagline: 'Parent studio brand — confident off-black, single hero accent, editorial type.',
+    appmark: 'P', title: 'Popup Bits', deva: false,
+    hero: { eyebrow: 'Studio', title: 'We build small, delightful apps.', sub: 'Based in Kathmandu. Calendar, kids, games, and more.' },
+    rows: [
+      { title: 'Mero Patro', sub: 'Calendar · Released', badge: 'Live' },
+      { title: 'SpellCraft', sub: 'Word game · Beta' },
+    ],
+    btns: ['See work', 'Contact'],
+    variants: [
+      { key: 'safe', label: 'Safe · Hot Coral', accent: '#FF5A3C', soft: '#FFE3DC', ink: '#0E1115',
+        light: { bg: '#FFFFFF', raised: '#FFFFFF', sunken: '#F6F7F3', fg: '#0E1115', muted: '#55584F', border: '#E6E7E1' },
+        dark:  { bg: '#0E1115', raised: '#181B20', sunken: '#080A0D', fg: '#F5F3EF', muted: '#9AA0A8', border: '#232931' },
+      },
+      { key: 'bold', label: 'Bold · Chartreuse', accent: '#C8F23C', soft: '#EEFAC8', ink: '#0E1115',
+        light: { bg: '#FBFBF5', raised: '#FFFFFF', sunken: '#F1F5E0', fg: '#0E1115', muted: '#55584F', border: '#E3E8CF' },
+        dark:  { bg: '#0E1115', raised: '#181B20', sunken: '#080A0D', fg: '#F5F3EF', muted: '#9AA0A8', border: '#232931' },
+      },
+    ],
+  },
+  {
+    id: 'meropatro', name: 'Mero Patro', archetype: 'Cultural', archClass: 'arch-cultural',
+    tagline: 'Nepali panchanga. Modern utility — crisp paper-white, one festival-red flag.',
+    appmark: '१', title: 'मेरो पात्रो', deva: true,
+    hero: { eyebrow: 'आज · मंसिर १५', title: 'शुभ साइत', sub: 'सोमबार · विक्रम सम्वत् २०८२' },
+    rows: [
+      { title: 'उदाउने', sub: '६:२८', badge: 'आज' },
+      { title: 'अस्ताउने', sub: '५:१२' },
+    ],
+    btns: ['आजको विवरण', 'पात्रो'],
+    variants: [
+      { key: 'safe', label: 'Safe · Sindoor Red', accent: '#C8372D', soft: '#FBE9E5', ink: '#1A1A1A',
+        light: { bg: '#FFFFFF', raised: '#FFFFFF', sunken: '#F7F4EC', fg: '#1A1A1A', muted: '#6B6A64', border: '#ECE6D4' },
+        dark:  { bg: '#141414', raised: '#1C1C1C', sunken: '#0C0C0C', fg: '#F5EFE3', muted: '#A59D8C', border: '#2A2A2A' },
+      },
+      { key: 'bold', label: 'Bold · Saffron', accent: '#E8832A', soft: '#FCEBD4', ink: '#111418',
+        light: { bg: '#FFFDF8', raised: '#FFFFFF', sunken: '#FAF2E0', fg: '#111418', muted: '#6B6A64', border: '#ECE4CD' },
+        dark:  { bg: '#111418', raised: '#1A1E24', sunken: '#0A0C10', fg: '#F5EFE3', muted: '#A59D8C', border: '#262B33' },
+      },
+    ],
+  },
+  {
+    id: 'meronepali', name: 'Mero Nepali', archetype: 'Kid', archClass: 'arch-kid',
+    tagline: 'Kids learning Nepali. Rounded, bouncy, legible at small sizes.',
+    appmark: 'अ', title: 'Mero Nepali', deva: false,
+    hero: { eyebrow: 'आज सिक', title: 'स्वर वर्ण', sub: 'अ आ इ ई उ ऊ — 12 letters today' },
+    rows: [
+      { title: 'Practice ‘अ’', sub: 'Tap the balloon', badge: 'NEW' },
+      { title: 'Trace ‘आ’', sub: 'Guided stroke' },
+    ],
+    btns: ['खेल्नुहोस्', 'Map'],
+    variants: [
+      { key: 'safe', label: 'Safe · Sky Pastel', accent: '#4FA8D8', soft: '#E3F2FB', ink: '#1C4A6A',
+        light: { bg: '#F3FAFE', raised: '#FFFFFF', sunken: '#E3F2FB', fg: '#1C4A6A', muted: '#5E7A8F', border: '#CFE6F5' },
+        dark:  { bg: '#0F1A24', raised: '#182838', sunken: '#0A1218', fg: '#E6F0F7', muted: '#9AB3C4', border: '#253849' },
+      },
+      { key: 'bold', label: 'Bold · Leaf & Sunshine', accent: '#2EB872', soft: '#DFF6E8', ink: '#F5A524',
+        light: { bg: '#F4FBF6', raised: '#FFFFFF', sunken: '#DFF6E8', fg: '#184E33', muted: '#4F7A62', border: '#BFE7CE' },
+        dark:  { bg: '#0E1A14', raised: '#17261D', sunken: '#0A120E', fg: '#E8F4EC', muted: '#9BB8A6', border: '#1F3527' },
+      },
+    ],
+  },
+  {
+    id: 'spellcraft', name: 'SpellCraft', archetype: 'Kid', archClass: 'arch-kid',
+    tagline: 'Word / spelling game. Mystical — midnight violet, rune gold, emerald rewards.',
+    appmark: '✦', title: 'SpellCraft', deva: false,
+    hero: { eyebrow: 'LEVEL 7', title: 'Cast the word', sub: 'Combine runes to spell “ALCHEMY”' },
+    rows: [
+      { title: 'A · L · C', sub: '3 of 7 runes placed', badge: '+40' },
+      { title: 'Daily quest', sub: 'Spell 5 words today' },
+    ],
+    btns: ['Cast spell', 'Hint'],
+    variants: [
+      { key: 'safe', label: 'Safe · Rune Gold', accent: '#E6B949', soft: '#F9EBC3', ink: '#2A1E57',
+        light: { bg: '#FBF6E5', raised: '#FFFDF0', sunken: '#F3E8B8', fg: '#2A1E57', muted: '#6B6087', border: '#E4D99F' },
+        dark:  { bg: '#1A0F3D', raised: '#2A1E57', sunken: '#0E0729', fg: '#F3EFFF', muted: '#B8ADE0', border: '#3B2E77' },
+      },
+      { key: 'bold', label: 'Bold · Arcane Magenta', accent: '#D84DD4', soft: '#F6DCF5', ink: '#54E3E8',
+        light: { bg: '#FBF2FA', raised: '#FFFFFF', sunken: '#F2DFF0', fg: '#38104B', muted: '#76548A', border: '#E8CEE6' },
+        dark:  { bg: '#0E0729', raised: '#1A0F3D', sunken: '#080319', fg: '#F3EFFF', muted: '#B8ADE0', border: '#2E1F6B' },
+      },
+    ],
+  },
+  {
+    id: 'jyotish', name: 'Jyotish', archetype: 'Cultural', archClass: 'arch-cultural',
+    tagline: 'Astrology, kundali, rashifal. Celestial — deep indigo night with gold and saffron.',
+    appmark: '✶', title: 'ज्योतिष', deva: true,
+    hero: { eyebrow: 'आजको राशिफल', title: 'वृश्चिक', sub: 'Today favors new beginnings; trust your intuition after sunset.' },
+    rows: [
+      { title: 'Kundali match', sub: '36 guna analysis', badge: 'NEW' },
+      { title: 'आजको पञ्चाङ्ग', sub: 'Tithi · Nakshatra · Yog' },
+    ],
+    btns: ['Read more', 'Kundali'],
+    variants: [
+      { key: 'safe', label: 'Safe · Indigo & Gold', accent: '#E9C46A', soft: '#F7EBC6', ink: '#1B2454',
+        light: { bg: '#FDFAF0', raised: '#FFFFFF', sunken: '#F5E8BF', fg: '#1B2454', muted: '#5C6284', border: '#E5D8A7' },
+        dark:  { bg: '#0F1638', raised: '#1B2454', sunken: '#080D22', fg: '#F5F0E1', muted: '#B9B19A', border: '#2A3573' },
+      },
+      { key: 'bold', label: 'Bold · Cosmic Saffron', accent: '#F4A259', soft: '#FBE1C7', ink: '#2A1450',
+        light: { bg: '#FEF6EC', raised: '#FFFFFF', sunken: '#F8DFBE', fg: '#2A1450', muted: '#6A547C', border: '#E8CCA3' },
+        dark:  { bg: '#1A0A3E', raised: '#2A1450', sunken: '#0F0428', fg: '#F5F0E1', muted: '#B9A8D4', border: '#3B1F6B' },
+      },
+    ],
+  },
+  {
+    id: 'sanskrit', name: 'Sanskrit', archetype: 'Cultural', archClass: 'arch-cultural',
+    tagline: 'Classical-language learning. Manuscript — palm-leaf beige, deep maroon, gold illumination.',
+    appmark: 'ॐ', title: 'संस्कृतम्', deva: true,
+    hero: { eyebrow: 'पाठ १२', title: 'भगवद्गीता · अध्याय २', sub: "Today's śloka: कर्मण्येवाधिकारस्ते मा फलेषु कदाचन" },
+    rows: [
+      { title: 'Vocabulary', sub: '24 new words', badge: 'नव' },
+      { title: 'Sandhi practice', sub: '12 exercises' },
+    ],
+    btns: ['पठ', 'Dictionary'],
+    variants: [
+      { key: 'safe', label: 'Safe · Maroon on Palm', accent: '#8C1D1D', soft: '#F2E6C8', ink: '#B8862B',
+        light: { bg: '#FBF4DE', raised: '#FFFBEE', sunken: '#F2E6C8', fg: '#3A1515', muted: '#756247', border: '#E4D3A3' },
+        dark:  { bg: '#1A0F0E', raised: '#251814', sunken: '#120908', fg: '#F2E6C8', muted: '#B09A77', border: '#342019' },
+      },
+      { key: 'bold', label: 'Bold · Illuminated Gold', accent: '#B8862B', soft: '#F4E1A8', ink: '#5A0F0F',
+        light: { bg: '#FBF4DE', raised: '#FFFBEE', sunken: '#F2E6C8', fg: '#3A1515', muted: '#756247', border: '#E4D3A3' },
+        dark:  { bg: '#1A110A', raised: '#241A10', sunken: '#120A06', fg: '#F4E1A8', muted: '#B8A076', border: '#342618' },
+      },
+    ],
+  },
+  {
+    id: 'rent', name: 'Rent', archetype: 'Marketplace', archClass: 'arch-marketplace',
+    tagline: 'Peer-to-peer rental marketplace. Trust-teal — fresh, crisp, utility.',
+    appmark: 'R', title: 'Rent', deva: false,
+    hero: { eyebrow: 'Near Patan', title: '2BHK · Sunny balcony', sub: 'Rs 18,000/mo · Available from Mangsir 1' },
+    rows: [
+      { title: 'Studio · Jhamsikhel', sub: 'Rs 12,500/mo', badge: 'NEW' },
+      { title: '1BHK · Kupondole', sub: 'Rs 16,000/mo' },
+    ],
+    btns: ['Contact owner', 'Save'],
+    variants: [
+      { key: 'safe', label: 'Safe · Trust Teal', accent: '#0E8A8A', soft: '#D6EFEE', ink: '#0B2A38',
+        light: { bg: '#FFFFFF', raised: '#FFFFFF', sunken: '#F6F8F8', fg: '#0B2A38', muted: '#4F6873', border: '#E1E3DD' },
+        dark:  { bg: '#0A1518', raised: '#13222A', sunken: '#060E11', fg: '#E6F0F2', muted: '#8FA7B0', border: '#1D2E36' },
+      },
+      { key: 'bold', label: 'Bold · Seafoam', accent: '#14B8A6', soft: '#E6FBF7', ink: '#1F2937',
+        light: { bg: '#FFFFFF', raised: '#FFFFFF', sunken: '#F0FBF9', fg: '#1F2937', muted: '#546673', border: '#D8EFEA' },
+        dark:  { bg: '#0A1512', raised: '#14221E', sunken: '#060E0B', fg: '#E6F2EE', muted: '#8FA8A0', border: '#1D2E28' },
+      },
+    ],
+  },
+];
+
+function surfaceStyle(s) {
+  return `--bg:${s.bg};--bg-raised:${s.raised};--bg-sunken:${s.sunken};--fg:${s.fg};--fg-muted:${s.muted};--border:${s.border};`;
+}
+
+function onAccent(hex) {
+  // Pick a readable button text color: if hex is light, use a dark ink; if dark, use white.
+  const h = hex.replace('#','');
+  const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+  return lum > 0.55 ? '#111' : '#fff';
+}
+
+function renderVariant(p, v, mode) {
+  const surf = v[mode];
+  const isDark = mode === 'dark';
+  const style = `${surfaceStyle(surf)}--accent:${v.accent};--accent-soft:${v.soft};--accent-ink:${v.ink};`;
+  const btnFg = onAccent(v.accent);
+  const badgeFg = onAccent(v.accent);
+  return `
+<div class="variant ${p.archClass} ${isDark ? 'is-dark' : ''}" style="${style}">
+  <div class="variant-head">
+    <span class="variant-label">${v.label} · ${isDark ? 'Dark' : 'Light'}</span>
+    <div class="swatches">
+      <div class="sw" style="background:${v.accent}"></div>
+      <div class="sw" style="background:${v.soft}"></div>
+      <div class="sw" style="background:${v.ink}"></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="topbar">
+      <div class="appmark">${p.appmark}</div>
+      <div class="apptitle">${p.title}</div>
+      <div class="iconbtn">☰</div>
+    </div>
+    <div class="hero">
+      <div class="eyebrow">${p.hero.eyebrow}</div>
+      <div class="title">${p.hero.title}</div>
+      <div class="sub">${p.hero.sub}</div>
+    </div>
+    <div class="list">
+      ${p.rows.map((r, i) => `
+        <div class="row">
+          <div class="dot"></div>
+          <div class="rt">
+            <div class="rtitle">${r.title}</div>
+            <div class="rsub">${r.sub}</div>
+          </div>
+          ${r.badge ? `<div class="badge" style="color:${badgeFg}">${r.badge}</div>` : ''}
+        </div>`).join('')}
+    </div>
+    <div class="btnrow">
+      <button class="btn btn-primary" style="color:${btnFg}">${p.btns[0]}</button>
+      <button class="btn btn-secondary">${p.btns[1]}</button>
+    </div>
+  </div>
+</div>`;
+}
+
+function renderProduct(p) {
+  const cells = [];
+  for (const v of p.variants) {
+    cells.push(renderVariant(p, v, 'light'));
+    cells.push(renderVariant(p, v, 'dark'));
+  }
+  return `
+<section class="product">
+  <div class="phead">
+    <div class="mark"><img src="assets/logos/${p.id}-mark.svg" alt=""></div>
+    <div class="pmeta">
+      <div class="pname">${p.name}</div>
+      <div class="ptag">${p.tagline}</div>
+    </div>
+    <span class="archetype-chip">${p.archetype}</span>
+  </div>
+  <div class="grid">${cells.join('')}</div>
+</section>`;
+}
+
+document.getElementById('mount').innerHTML = products.map(renderProduct).join('');
+</script>
+</body>
+</html>

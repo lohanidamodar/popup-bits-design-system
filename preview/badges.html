@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+  .b-accent{background:var(--accent);color:#fff}
+  .b-soft{background:var(--accent-soft);color:var(--accent-ink)}
+  .b-success{background:color-mix(in srgb,var(--success) 15%,transparent);color:var(--success)}
+  .b-warn{background:color-mix(in srgb,var(--warning) 20%,transparent);color:#8a5a00}
+  .b-danger{background:color-mix(in srgb,var(--danger) 15%,transparent);color:var(--danger)}
+  .b-outline{background:transparent;border:1px solid var(--border-strong);color:var(--fg-muted)}
+  .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+  .lbl{width:140px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-muted);font-weight:700}
+</style></head><body>
+<div class="row theme-meronepali"><div class="lbl">Accent / soft</div>
+  <span class="badge b-accent">New</span>
+  <span class="badge b-soft">Beta</span>
+</div>
+<div class="row"><div class="lbl">Status</div>
+  <span class="badge b-success"><span class="dot"></span>Published</span>
+  <span class="badge b-warn">Pending</span>
+  <span class="badge b-danger">Removed</span>
+  <span class="badge b-outline">Draft</span>
+</div>
+<div class="row theme-jyotish"><div class="lbl">Jyotish</div>
+  <span class="badge b-accent">शुभ दिन</span>
+  <span class="badge b-soft">मंगल</span>
+</div>
+<div class="row theme-rent"><div class="lbl">Rent</div>
+  <span class="badge b-accent">Available</span>
+  <span class="badge b-soft">For rent</span>
+  <span class="badge b-outline">Seeking</span>
+</div>
+</body></html>

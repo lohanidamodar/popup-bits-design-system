@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="Popup Bits">
+  <defs>
+    
+  </defs>
+  
+  <g transform="translate(16,20)">
+    <rect x="0" y="0" width="78" height="78" rx="22" class="pb-ink"></rect>
+    <path d="M26 24 L18 40 L26 56" stroke="#FAFAF7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    <path d="M52 24 L60 40 L52 56" stroke="#FAFAF7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    <circle cx="39" cy="40" r="6" class="pb-accent"></circle>
+  </g>
+  <text x="114" y="78" class="pb-ink pb-mono">popup<tspan class="pb-accent">bits</tspan></text>
+</svg>

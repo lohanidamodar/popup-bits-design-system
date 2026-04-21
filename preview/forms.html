@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-sans);color:var(--fg)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:var(--fg-muted);letter-spacing:.02em;text-transform:uppercase}
+  input,select,textarea{font:inherit;font-size:15px;color:var(--fg);background:var(--bg-sunken);border:1px solid var(--border);border-radius:14px;padding:12px 14px;outline:none;transition:all 160ms var(--ease-out)}
+  input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%, transparent);background:var(--bg-raised)}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;background:var(--accent-soft);color:var(--accent-ink)}
+  .chipset{display:flex;gap:8px;flex-wrap:wrap}
+</style></head><body class="theme-meronepali">
+<div class="grid">
+  <label>Your name<input placeholder="e.g. Priya" value="Priya Shrestha"></label>
+  <label>Grade<select><option>Grade 1</option><option>Grade 2</option></select></label>
+  <label style="grid-column:1/-1">Note
+    <textarea rows="2" placeholder="Optional">मेरो छोरीले धेरै मज्जा पाइन्।</textarea>
+  </label>
+  <div style="grid-column:1/-1"><div style="font-size:12px;font-weight:700;color:var(--fg-muted);letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px">Interests</div>
+    <div class="chipset">
+      <span class="chip">Alphabet</span>
+      <span class="chip">Numbers</span>
+      <span class="chip">Words</span>
+      <span class="chip">Songs</span>
+    </div>
+  </div>
+</div>
+</body></html>
