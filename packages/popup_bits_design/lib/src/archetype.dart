@@ -2,7 +2,7 @@
 // Think of them as "visual stances" that sit above tokens and below
 // a specific product theme.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'tokens.dart';
 
 enum PbArchetype { kid, cultural, utility, marketplace }

@@ -2,7 +2,7 @@
 // onto Material 3's ColorScheme / TextTheme. Read from widgets with:
 //   final pb = Theme.of(context).extension<PbThemeExt>()!;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'archetype.dart';
 import 'product_theme.dart';
 import 'tokens.dart';

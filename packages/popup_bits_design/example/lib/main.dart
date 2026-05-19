@@ -4,7 +4,7 @@
 //   B) In-app product theme (apps define their own — the recommended
 //      pattern for new / third-party products).
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:popup_bits_design/popup_bits_design.dart';
 import 'package:popup_bits_design/products.dart'; // optional
 

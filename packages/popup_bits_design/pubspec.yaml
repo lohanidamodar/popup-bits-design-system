@@ -12,6 +12,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # Google's split-out Material / Cupertino UI libraries. Currently
+  # one-line re-exports of `package:flutter/material.dart` and
+  # `package:flutter/cupertino.dart`, but pinning the package to the
+  # standalone libraries gives a clean decoupling point if/when the
+  # Flutter SDK starts dropping these widgets in favour of these
+  # packages.
+  material_ui: ^0.0.1
+  cupertino_ui: ^0.0.1
   google_fonts: ^6.2.1
 
 dev_dependencies:
