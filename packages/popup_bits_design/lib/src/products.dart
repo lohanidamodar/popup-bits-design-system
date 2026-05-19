@@ -9,7 +9,7 @@
 // Dark mode is supported on every product (via PopupBitsTheme.build with
 // brightness: Brightness.dark). SpellCraft and Jyotish force dark.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'product_theme.dart';
 
 class PbProducts {

@@ -14,7 +14,11 @@
 //     ...
 //   )
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+// CupertinoPageTransitionsBuilder lives in the Cupertino library —
+// not re-exported by material_ui — so we import it explicitly for
+// the iOS page-transition entry in `pageTransitionsTheme` below.
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'archetype.dart';
 import 'product_theme.dart';

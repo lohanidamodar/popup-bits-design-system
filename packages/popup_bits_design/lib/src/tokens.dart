@@ -1,7 +1,7 @@
 // Base tokens shared by every product. Colours, type scale, spacing,
 // radii, shadows and motion curves. No product identity lives here.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class PbTokens {
   PbTokens._();

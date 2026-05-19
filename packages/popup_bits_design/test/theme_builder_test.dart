@@ -1,7 +1,7 @@
 // Smoke tests for PopupBitsTheme.build — make sure each archetype builds
 // a valid ThemeData and exposes PbThemeExt with the right accent colour.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:popup_bits_design/popup_bits_design.dart';
 

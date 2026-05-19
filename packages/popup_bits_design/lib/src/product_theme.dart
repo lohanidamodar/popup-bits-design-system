@@ -2,7 +2,7 @@
 // and an optional forced brightness). Every product theme for Popup
 // Bits ends up as one of these.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class PbProductTheme {
   /// Unique slug, e.g. 'meropatro', 'jyotish'.
